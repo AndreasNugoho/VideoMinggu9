@@ -1,0 +1,46 @@
+#Andreas Nugroho
+#71200646
+
+#pada sebuah dictionary terdapat beberapa data yang sama, buat sebuah program untuk menghapus dictionary yang memiliki value yang sama. 
+
+#input 
+#sudah di inputkan dari dalam program
+
+#proses
+#perulangan
+
+#output
+#hasil setelah di hapus
+def hapus(dict):
+  hasil = {}
+  for key,value in dict.items():
+    if value not in hasil.values():
+      hasil[key] = value
+  return hasil
+
+
+data = {'id1':
+  {'nama':'andre',
+    'kelas':'Alpro',
+  },
+  'id2':
+  {'nama':'david',
+  'kelas':'Jarkom',
+  },
+  'id3':
+  {'nama':'sara',
+  'kelas':'Tekkom',
+  },
+  'id4':
+  {'nama':'david',
+  'kelas':'Alpro',
+  },
+  'id5':
+  {
+    'nama':'sara',
+    'kelas':'Pkn'
+  }
+}
+
+hasil = hapus(data)
+print(hasil)
